@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script src="https://kit.fontawesome.com/c3694ab3ad.js"></script>
+
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+
+        }
+
+        body {
+            background: lightgray;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* TO FIX NAVBAR MEANS IT WILL FOLLOW US WHILE WE SCROLL */
+        #navbar {
+            position: fixed;
+            top: 0;
+            right: 0;
+
+        }
+
+        #navbarfull {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        @media(max-width:600px) {
+            body {
+                background: orange;
+            }
+
+        }
+
+        #full1 {
+            height: 45vh;
+            width: 100%;
+            background: url("image/a.jpg") no-repeat center/cover;
+
+        }
+
+        #full2 {
+            height: 170px;
+            width: 165px;
+            background: url("image/b.jpg")no-repeat top right/cover;
+            margin-left: 42.5%;
+
+            /* when we want to put one div over another div then we this */
+            position: relative;
+            top: -85px;
+            border-radius: 50%;
+
+        }
+        @media(max-width:768px){
+            #full1{
+                height:20vh;
+            }
+            #full2{
+                margin-left: 40%;
+            }
+            #full4{
+                margin-top: 5vh;
+                /* width:100%; */
+                background: red;
+            }
+            #navbarfull{
+                display:none;
+            }
+        }
+
+
+        #full3 {
+            text-align: center;
+
+
+        }
+
+        .p1 {
+            font-size: 18px;
+            padding-top:20px;
+
+
+        }
+
+        .p2{
+            font-size: 40px;
+
+
+        }
+
+        i {
+            color: rgb(44, 44, 236);
+            font-size: 35px;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        #full4 {
+            width: 80%;
+            height: 60vh;
+
+            margin-top: 10vh;
+            margin-right: 10%;
+            margin-left: 10%;
+            background: white;
+        }
+
+        #full5 {
+            width: 50%;
+            height: 100%;
+            float: left;
+
+        }
+
+        #full6 {
+            height: 60vh;
+            width: 30%;
+            float: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+
+        #full6 p {
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        #full7 {
+            float: right;
+            height: 100%;
+            width: 70%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+        }
+
+        #full7 p {
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        #full8 {
+            width: 50%;
+            height: 100%;
+            float: right;
+
+        }
+
+        #full8 p {
+            padding-top: 25px;
+            line-height: 25px;
+        }
+
+        #p5 {
+            font-size: 19px;
+            font-weight: 600;
+        }
+
+        #p6 {
+            font-size: 15px;
+        }
+
+        #but1 {
+            margin-top: 30px;
+            margin-right: 20px;
+        }
+
+        #but2 {
+            margin-top: 30px;
+        }
+
+        #full9 {
+
+            text-align: center;
+            padding-top: 100px;
+
+        }
+
+        #full9 p {
+            font-size: 45px;
+
+
+        }
+
+        #full25 {
+
+            text-align: center;
+            padding-top: 100px;
+
+        }
+
+        #full25 p {
+            font-size: 45px;
+
+
+        }
+
+        /* icon of professional */
+
+        #a {
+            width: 68px;
+            height: 68px;
+            background: black;
+            border-radius: 50%;
+            position: relative;
+            bottom: -34px;
+            margin-left: 22%;
+            text-align: center;
+
+        }
+
+        #prof {
+            font-size: 25px;
+            position: relative;
+            bottom: -21px;
+
+
+        }
+
+        /* icon of personal */
+        #b {
+            width: 68px;
+            height: 68px;
+            background: black;
+            border-radius: 50%;
+            position: relative;
+            bottom: 38px;
+            margin-left: 40%;
+            text-align: center;
+
+        }
+
+        #prof1 {
+            font-size: 25px;
+            position: relative;
+            bottom: -21px;
+
+
+
+        }
+
+        #full10 {
+            height: 60vh;
+            width: 80%;
+            margin-right: 10%;
+            margin-left: 10%;
+
+            /* margin-top: 4%; */
+        }
+
+        #full11 {
+            height: 100%;
+            width: 49%;
+            margin-right: 2%;
+            background: white;
+            float: left;
+        }
+
+        #full12 {
+            height: 100%;
+            width: 49%;
+            background: white;
+            float: right;
+
+
+        }
+
+        /* 
+        .p12 {
+            padding-top: 20px;
+            padding-right: 80%;
+
+        } */
+
+        /* 
+        icon of education */
+
+        #c {
+            width: 68px;
+            height: 68px;
+            background: black;
+            border-radius: 50%;
+
+
+            margin-left: 48%;
+            text-align: center;
+
+        }
+
+        #prof2 {
+            font-size: 25px;
+            position: relative;
+            bottom: -21px;
+
+
+
+        }
+
+
+
+        #full13 {
+            height: 40vh;
+            width: 38%;
+            margin-top: 5%;
+            margin-left: 8%;
+            background: white;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            padding-left: 30px;
+
+        }
+
+        .p13 {
+            font-size: 20px;
+
+        }
+
+        #full14 {
+            height: 40vh;
+            width: 38%;
+            background: white;
+            margin-right: 8%;
+            float: right;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            padding-left: 30px;
+
+
+
+
+        }
+
+
+        .project-tile p {
+            font-size: 45px;
+            text-align: center;
+            margin-top: 26%;
+
+        }
+
+        #full16 {
+            height: 40vh;
+            width: 38%;
+            margin-top: 5%;
+            margin-left: 8%;
+            background: white;
+            margin-top: 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            padding-left: 30px;
+
+
+        }
+
+        .p16 {
+            font-size: 25px;
+        }
+
+        #full17 {
+            height: 40vh;
+            width: 38%;
+            background: white;
+            margin-right: 8%;
+            float: right;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            padding-left: 30px;
+
+
+        }
+
+        .p16 {
+            font-size: 25px;
+        }
+
+
+
+        #full18 {
+            margin-top: 20%;
+            text-align: center;
+            padding-top: 100px;
+
+        }
+
+        #full18 p {
+            font-size: 45px;
+
+
+        }
+
+        #full19 {
+            height: 70vh;
+            width: 80%;
+            margin-right: 10%;
+            margin-left: 10%;
+            /* background: red; */
+            margin-top: 4%;
+        }
+
+        #full20 {
+            height: 100%;
+            width: 49%;
+            margin-right: 2%;
+            background: white;
+            float: left;
+        }
+
+        #full21 {
+            height: 100%;
+            width: 49%;
+            background: white;
+
+            float: right;
+
+        }
+
+        .p18 {
+            text-align: center;
+            margin-top: 5%;
+            color: darkgrey;
+        }
+
+        #full21 {
+            display: flex;
+            flex-direction: column;
+            justify-items: space-evenly;
+            align-items: center;
+        }
+
+        #full21 p {
+            font-size: 25px;
+            margin-top: 30px;
+
+        }
+    </style>
+
+</head>
+
+<body id="welcome-section">
+
+
+    <div id="navbarfull" class="demo-layout-transparent mdl-layout mdl-js-layout">
+        <header class="mdl-layout__header mdl-layout__header--transparent">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">My Portfolio</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation -->
+                <nav id="navbar" class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="#full9">Skills</a>
+                    <a class="mdl-navigation__link" href="#full25">Education</a>
+                    <a class="mdl-navigation__link" href="#projects">Projects</a>
+                    <a class="mdl-navigation__link" href="#full18">Contact Me</a>
+                </nav>
+            </div>
+        </header>
+        <div id="sidenavbar" class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Title</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="#full9">Skills</a>
+                <a class="mdl-navigation__link" href="#full25">Education</a>
+                <a class="mdl-navigation__link" href="#projects">Projects</a>
+                <a class="mdl-navigation__link" href="#full18">Contact Me</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+        </main>
+    </div>
+
+
+    <div id="full1">
+
+
+    </div>
+    <div id="full2">
+
+    </div>
+    <div id="full3">
+        <p1 class="p2">Rajneesh Singh</p1>
+        <p class="p1">UX/UI Designer & Front-end Developer</p>
+        <a href="https://www.facebook.com/profile.php?id=100003400615264"><i class="fab fa-facebook"></i></a>
+        <a href="https://github.com/Rajneesh-Singh"> <i class="fab fa-github"></i></a>
+        <a href=""> <i class="fab fa-twitter"></i></a>
+        <a href=""><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://myaccount.google.com"><i class="fab fa-google-plus-g"></i></a>
+
+    </div>
+
+    <div id="full4">
+        <div id="full5">
+            <div id="full6">
+                <p>Age:</p>
+                <p>Job:</p>
+                <p>Citizenship:</p>
+                <p>Address:</p>
+                <p>Phone:</p>
+                <p>E-mail:</p>
+            </div>
+            <div id="full7">
+                <p>24 Years</p>
+                <p>Front-end Developer</p>
+                <p>India</p>
+                <p>H no:45 Naubasta , Kanpur (UP)</p>
+                <p>798 536 7744</p>
+                <p>rajneeshsingh1007@gmail.com</p>
+
+            </div>
+        </div>
+
+        <div id="full8">
+            <p id="p5">Hello! I’m Rajneesh Singh</p>
+            <p id="p6">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
+                sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Sed ut
+                perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.
+                <br> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                magni dolores. </p>
+            <!-- Colored raised button -->
+            <a href="#full1"> <button id="but1" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                    Download CV
+                </button></a>
+            <!-- Colored raised button -->
+            <a href="#full18"><button id="but2" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+
+                    Contact Me
+                </button></a>
+        </div>
+
+    </div>
+
+
+    <div id="full9">
+        <p>Skills</p>
+    </div>
+
+    <div id="full10">
+        <div id="a">
+            <a href=""><i id="prof" class="fas fa-cog"></i></a>
+
+        </div>
+
+        <div id="full11">
+
+        </div>
+
+        <div id="full12">
+            <div id="b">
+                <a href=""><i id="prof1" class="fas fa-user-tie"></i></a>
+                <!-- <p class="p12">Communication</p>
+                <p class="p12">Team Work</p>
+                <p class="p12">Leadership</p>
+                <p class="p12">Creativity</p>
+                <p class="p12">Language</p> -->
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="full25">
+        <p>Education</p>
+    </div>
+    <div id="c">
+        <a href=""><i id="prof2" class="fas fa-university"></i></a>
+    </div>
+    <div id="full13">
+        <p class="p16">Lovely Professional University (LPU) </p>
+        <p class="P13" style="font-size: 20px">Punjab</p>
+        <p>I had done B-tech with Computer Science Engneering (CSE) .It was four year course from 2014 to 2018.</p>
+        <a href="">MORE</a>
+    </div>
+    <div id="full14">
+        <p class="p16">Front-end Course </p>
+        <p class="p13"> Free CodeCamp </p>
+        <p>I had done Front-end course from Free CodeCamp by learning HTML5 ,CSS3 , Bootstrap and JavaScript</p>
+        <a href="">MORE</a>
+
+
+    </div>
+
+    <section id="projects">
+        <div class="project-tile">
+            <p>Projects</p>
+        </div>
+        <div id="full16">
+            <p class="p16">My Crypto </p>
+            <p>It keeps the the track of our Crypto currency . Done using HTML5 , CSS3 , JavaScript and by using Api
+                call
+                which is done using Axios JavaScript library</p>
+            <a id="profile-link" target="_blank" href="https://github.com/Rajneesh-Singh/My-Crypto.git">MORE</a>
+
+        </div>
+    </section>
+    <div id="full17">
+        <p class="p16">Portfolio Gibson Website </p>
+        <p>It is a portfolio website just like Gibson portfolio website . Done using HTML5 , CSS3 and JavaScript.</p>
+        <a href="https://github.com/Rajneesh-Singh/Gibson-Portfolio-website.git" target="_blank">MORE</a>
+
+
+    </div>
+
+
+    <div id="full18">
+        <p>Contact Me</p>
+    </div>
+    <div id="full19">
+        <div id="full20">
+
+        </div>
+        <div id="full21">
+            <p>Write a message:</p>
+            <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" id="sample1">
+                <label class="mdl-textfield__label" for="sample1">Name</label>
+            </div>
+
+            <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" id="sample1">
+                <label class="mdl-textfield__label" for="sample1">Your Email</label>
+            </div>
+
+            <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" id="sample1">
+                <label class="mdl-textfield__label" for="sample1">Subject</label>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" id="sample1">
+                <label class="mdl-textfield__label" for="sample1">Message</label>
+            </div>
+
+            <!-- Primary-colored flat button -->
+            <!-- Colored raised button -->
+            <br>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                Message
+            </button>
+
+        </div>
+    </div>
+
+    <div class="p18">
+        <p>© 2019 mCard. All rights reserved.</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
